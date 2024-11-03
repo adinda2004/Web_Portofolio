@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <h1>Web Profile</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="container">
+        <div class="content">
+            <p>HALLO EVERYONE</p>
+            <h2>Adinda Hutasoit</h2>
+            <p>Undergraduate degree in computer engineering. I am addicted to technology, and always interested in
+                trying new things. For now, I am more interested in Web Development. Using React as front end and
+                Express JS backend for my project.</p>
+            <button onclick="downloadCV()">My Resume</button>
+        </div>
+        <img src="4.jpeg" alt="My Photo">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <div class="about-cards">
+            <div class="about-card" onclick="showInfo('Hobbies')">
+                <p>Hobbies</p>
+            </div>
+            <div class="about-card" onclick="showInfo('Education')">
+                <p>Education</p>
+            </div>
+            <div class="about-card" onclick="showInfo('Experience')">
+                <p>Organisation Experience</p>
+            </div>
+        </div>
+        <div id="about-info" class="about-info">
+            <p id="info-text">Click on any circle to see more!</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="project-card-container">
+            <div class="project-card">
+                <h3>Project 1: Sistem Informasi Pertanian</h3>
+                <p>website pertanian berisi peminjaman alat pertanian, dan edukasi pertanian</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: website pizza Andaliman Balige</h3>
+                <p>berkontribusi sebagai perancangan pembangunan Website pemesanan makanan di restoran pizza andaliman Balige</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3: Test Functionality Web</h3>
+                <p>Tested the functionality of the Indomaret website using the TestRail.
+                </p>
+            </div>
+            <div class="project-card">
+                <h3>Project 4: main map</h3>
+                <p>Implementing Computational Thinking in Education. Developing Problem-Solving Skills Through Problem Creation 
+                    and Resolution.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skill-card-container">
+            <div class="skill-card">
+                <h3>HTML & CSS</h3>
+                <p>Penguasaan HTML dan CSS untuk membangun halaman web yang responsif dan menarik.</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Memahami dasar-dasar JavaScript untuk menambahkan interaktivitas ke dalam halaman web.</p>
+            </div>
+            <div class="skill-card">
+                <h3>tools</h3>
+                <p>Mampu menggunakan Visual Studio Code, Figma, Star UML, Bizagi, Visual Paradigm and Draw io</p>
+            </div>
+            <div class="skill-card">
+                <h3>Web Testing</h3>
+                <p>Mengetahui prinsip dasar desain UI/UX untuk menciptakan pengalaman pengguna yang baik.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Problem Solving</h3>
+                <p>mengetahui test Cucumber, Selenium, Robot framework, Katalon,Create and Run Test Case, Test Scenario, Manual Testing, Test Rail, Authomation Testing, Agile
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out! I’d love to hear from you.</p>
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon">LinkedIn</a>
+                <a href="https://github.com/adinda2004/adinda" target="_blank" class="social-icon">GitHub</a>
+                <a href="mailto:your.email@example.com" class="social-icon">Email</a>
+            </div>
+        </div>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Nama Anda]. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function downloadCV() {
+            window.open('CV_Adinda Hutasoit.pdf', '_blank');
+        }
+
+        function showInfo(type) {
+            let infoText = document.getElementById('info-text');
+            if (type === 'Hobbies') {
+                infoText.innerText = "I enjoy drawing, reading novels, and watching movies. These hobbies keep me inspired and motivated.";
+            } else if (type === 'Education') {
+                infoText.innerText = "I am pursuing a degree in Information Technology, currently focusing on web development and software engineering. I am in my 5th semester and engaged in an independent study at Infinite Learning to deepen my expertise.";
+            } else if (type === 'Experience') {
+                infoText.innerText = "I have experience working in both frontend and backend development, using React and Express.js for my projects.";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const projectTitle = card.querySelector('h3').innerText;
+                    alert(`You clicked on the project: ${projectTitle}`);
+                });
+            });
+        });
+
+        const skillCards = document.querySelectorAll('.skill-card');
+
+        skillCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.1)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            alert('Your message has been sent successfully!'); 
+            this.reset(); 
+        });
+
+
+    </script>
+</body>
+
+</html>
